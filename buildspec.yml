@@ -6,7 +6,10 @@ phases:
       - npm install time
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket celebrityquotes2
                                    --output-template-file NewSamTemplate.yaml
+      - aws cloudformation package --template-file samTemplate2.yaml --s3-bucket celebrityquotes2
+                              --output-template-file NewSamTemplate2.yaml
 artifacts:
   type: zip
   files:
     - NewSamTemplate.yaml
+    - NewSamTemplate2.yaml

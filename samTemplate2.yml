@@ -1,4 +1,3 @@
-
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Outputs the time
@@ -6,11 +5,11 @@ Resources:
   TimeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: index2.handler
       Runtime: nodejs4.3
       CodeUri: ./
       Events:
-        MyTimeApi:
+        MyTimeApi2:
           Type: Api
           Properties:
             Path: /TimeResource
